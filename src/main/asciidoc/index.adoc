@@ -1,0 +1,79 @@
+= Customer Service Getting Started Guide
+Dan Hunter;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[introduction]
+= Introduction
+
+Customer service is a RESTful web service for creating and storing customers. It uses hypermedia
+to describe the relationships between resources and to allow navigation between them.
+
+[getting-started]
+= Getting started
+
+[getting-started-running-the-service]
+== Running the service
+The customer service is written using http://projects.spring.io/spring-boot[Spring Boot] which
+makes it easy to get it up and running so that you can start exploring the REST API.
+
+The first step is to clone the Git repository:
+
+[source,bash]
+----
+$ git clone https://user@bitbucket.org/motabilitydiscovery/customer-service.git
+----
+
+Once the clone is complete, you're ready to get the service up and running:
+
+[source,bash]
+----
+$ cd customer-service
+$ gradlew.bat clean build
+$ java -jar build/libs/customer-service-1.0.0-SNAPSHOT.jar
+----
+
+You can check that the service is up and running by executing a simple request using
+cURL:
+
+include::{snippets}/index/1/curl-request.adoc[]
+
+This request should yield the following response in the
+http://stateless.co/hal_specification.html[Hypertext Application Language (HAL)] format:
+
+include::{snippets}/index/1/http-response.adoc[]
+
+Note the `_links` in the JSON response. They are key to navigating the API.
+
+
+[getting-started-creating-a-customer]
+== Creating a Customer
+Now that you've started the service and verified that it works, the next step is to use
+it to create a new customer. As you saw above, the URI for working with customers is included as
+a link when you perform a `GET` request against the root of the service:
+
+include::{snippets}/index/1/http-response.adoc[]
+
+To create a customer, you need to execute a `POST` request to this URI including a JSON
+payload containing the customer details in the body:
+
+include::{snippets}/creating-a-customer/1/curl-request.adoc[]
+
+The response from this request should have a status code of `201 Created` and contain a
+`Location` header whose value is the URI of the newly created customer:
+
+include::{snippets}/creating-a-customer/1/http-response.adoc[]
+
+To work with the newly created customer you use the URI in the `Location` header. For example,
+you can access the customer's details by performing a `GET` request:
+
+include::{snippets}/creating-a-customer/2/curl-request.adoc[]
+
+This request will produce a response with the customer's details in its body:
+
+include::{snippets}/creating-a-customer/2/http-response.adoc[]
+

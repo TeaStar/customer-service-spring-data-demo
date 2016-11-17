@@ -1,0 +1,13 @@
+
+spring:
+    application:
+        name: customer-service
+    data:
+        mongodb:
+            host: 127.0.0.1
+            port: 27017
+    jackson:
+        serialization:
+            indent_output: true
+server:
+    port: 8080
