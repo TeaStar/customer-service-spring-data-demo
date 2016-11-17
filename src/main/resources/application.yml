@@ -1,4 +1,4 @@
-
+# TODO workout how to externalise properties
 spring:
     application:
         name: customer-service
