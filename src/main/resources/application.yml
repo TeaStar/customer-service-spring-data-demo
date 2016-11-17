@@ -4,7 +4,7 @@ spring:
         name: customer-service
     data:
         mongodb:
-            host: 127.0.0.1
+            host: mongoinit.springboot.svc.cluster.local
             port: 27017
     jackson:
         serialization:
