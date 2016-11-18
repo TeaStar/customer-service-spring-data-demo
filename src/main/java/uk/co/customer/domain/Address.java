@@ -3,7 +3,10 @@ package uk.co.customer.domain;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
+import javax.persistence.Entity;
+
 @Data
+@Entity
 public class Address {
 
     @Id
