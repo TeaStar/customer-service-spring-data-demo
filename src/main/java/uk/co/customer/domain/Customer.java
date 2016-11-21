@@ -3,12 +3,9 @@ package uk.co.customer.domain;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 @Data
-@Entity
 public class Customer {
 
     @Id
@@ -29,7 +26,6 @@ public class Customer {
     private String emailAddress;
     private String mothersMaidenName;
 
-    @OneToOne
     private Address address;
 
 }
