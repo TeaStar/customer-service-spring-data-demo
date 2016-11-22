@@ -28,4 +28,13 @@ public class Customer {
 
     private Address address;
 
+    private Boolean allowContactConsent;
+    private Boolean customerAtCareAddress;
+    private Boolean receivingTwentyFourHourCare;
+
+    private Boolean receiveLifestyleMagazine;
+    private Boolean receiveCharitableFundRaisingInfo;
+
+
+
 }

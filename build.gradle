@@ -54,17 +54,18 @@ asciidoctor {
 }
 
 dependencies {
-//    compile "org.springframework.boot:spring-boot-starter-data-jpa"
+    // Spring Dependencies
     compile 'org.springframework.boot:spring-boot-starter-data-rest'
     compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
     compile 'org.springframework.boot:spring-boot-starter-web'
 
+    // 3rd Party Dependencies
     compile 'org.projectlombok:lombok:1.16.10'
 
     // Embedded MongoDb
     //compile "de.flapdoodle.embed:de.flapdoodle.embed.mongo:1.50.3"
 
-
+    // Test Dependencies
     testCompile 'org.springframework.boot:spring-boot-starter-test'
     testCompile 'org.springframework.restdocs:spring-restdocs-mockmvc:1.1.2.RELEASE'
     testCompile 'com.jayway.jsonpath:json-path'

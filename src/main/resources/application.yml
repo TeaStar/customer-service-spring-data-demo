@@ -1,14 +1,27 @@
-# TODO workout how to externalise properties
 spring:
-    application:
-        name: customer-service
+  profiles.active: development
+  application:
+      name: customer-service
+  jackson:
+      serialization:
+          indent_output: true
+
+---
+spring:
+    profiles: production
     data:
         mongodb:
             host: mongoinit.springboot.svc.cluster.local
-            #host: 127.0.0.1
             port: 27017
-    jackson:
-        serialization:
-            indent_output: true
 server:
     port: 8080
+
+---
+spring:
+    profiles: development
+    data:
+        mongodb:
+          host: 127.0.0.1
+          port: 27017
+server:
+    port: 5000
