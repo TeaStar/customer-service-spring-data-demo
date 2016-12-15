@@ -61,7 +61,7 @@ public class GettingStartedDocumentation {
     @Test
     public void creatingACustomer() throws Exception {
         String customerLocation = createCustomer();
-        MvcResult customer = getCustomer(customerLocation);
+        getCustomer(customerLocation);
     }
 
     String createCustomer() throws Exception {

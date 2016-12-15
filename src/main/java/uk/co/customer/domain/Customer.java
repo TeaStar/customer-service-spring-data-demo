@@ -35,6 +35,4 @@ public class Customer {
     private Boolean receiveLifestyleMagazine;
     private Boolean receiveCharitableFundRaisingInfo;
 
-
-
 }
