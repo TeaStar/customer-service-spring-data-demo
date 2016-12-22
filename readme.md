@@ -13,7 +13,7 @@ The customer service is written using [Spring Boot](http://projects.spring.io/sp
 The first step is to clone the Git repository:
 
 ```
-$ git clone https://user@bitbucket.org/motabilitydiscovery/customer-service.git
+$ git clone https://github.com/TeaStar/customer-service-spring-data-demo.git
 ```
 
 Once the clone is complete, you're ready to get the service up and running:
