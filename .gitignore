@@ -1,6 +1,7 @@
 .gradle
 /build/
 /target/
+/out/
 !gradle/wrapper/gradle-wrapper.jar
 
 ### STS ###
@@ -16,13 +17,3 @@
 *.iws
 *.iml
 *.ipr
-
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
-src/main/etc/
-target/
